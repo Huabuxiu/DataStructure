@@ -16,6 +16,10 @@ public class LinkedListTest {
         System.out.println("结束");
 
 //        list.get(20);
-        list.delete(5);
+        list.delete(20);
+
+        for (int i =0;i<list.size;i++){
+            System.out.print(list.get(i)+" ");
+        }
     }
 }

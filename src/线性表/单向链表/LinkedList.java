@@ -32,8 +32,8 @@ public class LinkedList<E> {
         * @Author: Huabuxiu
         * @Date: 2019/4/5
         */
-        if(index>= size || size == 0)
-            throw new Exception("超出链表长度");
+        if(index>= size || size == 0 || index < 0)
+            throw new Exception("非法索引");
 
         Node node = head;
         for (int i =0 ; i<index;i++){
@@ -43,7 +43,35 @@ public class LinkedList<E> {
     }
 
 
+    public void delete(int index) throws Exception {
+        /**
+        * @Description: 删除index位置的节点
+        * @Param: [index]
+        * @return: boolean
+        * @Author: Huabuxiu
+        * @Date: 2019/4/6
+        */
+        if(index>= size || size == 0 || index <0)
+            throw new Exception("非法索引");
+
+        Node prenode = new Node(null,head);
+        for (int i =0 ; i<index-1;i++){
+            prenode = prenode.next;
+        }
+        if (prenode.next == head){//删除头节点
+            head= head.next;    //删除链表头节点
+        }
+        if (prenode.next == tail){  //删除链表的尾节点
+            tail = prenode;
+        }
+        prenode.next = prenode.next.next;
+        size--;
+
+    }
+
+    //删除element元素的节点
     public boolean delete(E element){
+
         Node temp = new Node(null,head);    //删除链表头结点
         Node dump = temp;
 
