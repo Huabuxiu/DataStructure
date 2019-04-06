@@ -16,6 +16,22 @@ public class DoubleLink<E> {
         return size;
     }
 
+    public DNode getHead() {
+        return head;
+    }
+
+    public void setHead(DNode head) {
+        this.head = head;
+    }
+
+    public DNode getTail() {
+        return tail;
+    }
+
+    public void setTail(DNode tail) {
+        this.tail = tail;
+    }
+
     public boolean isEmpty(){
         return size==0 ? true : false;
     }
@@ -103,8 +119,12 @@ public class DoubleLink<E> {
             throw new IndexOutOfBoundsException("非法索引");
         DNode node = getNode(index);
         if (node == head){  //删头
-            head = head.next;
-            head.prev = null;
+            if (head != tail){
+                head = head.next;
+                head.prev = null;
+            }else {
+                head = head.next;
+            }
             size--;
             node = null;
             return;
