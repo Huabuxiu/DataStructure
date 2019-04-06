@@ -42,7 +42,7 @@ public class LinkedList<E> {
         size++;
     }
 
-    public E get(int index) throws Exception {
+    public E get(int index) {
         /*
         * @Description: 返回index位置的值
         * @Param: [index]
@@ -51,8 +51,7 @@ public class LinkedList<E> {
         * @Date: 2019/4/5
         */
         if(index>= size || size == 0 || index < 0)
-            throw new Exception("非法索引");
-
+            return null;
         Node node = head;
         for (int i =0 ; i<index;i++){
             node = node.next;

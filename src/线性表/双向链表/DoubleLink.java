@@ -51,7 +51,7 @@ public class DoubleLink<E> {
     public E get(int index) {
         //返回第index位置的节点的值
         if (index > size || index < 0 || size==0)
-            throw new IndexOutOfBoundsException("非法索引");
+            return null;
         if (index < size /2) {  //正向查找
             DNode tempiont = head;
             for (int i = 0; i < index; i++) {
@@ -141,8 +141,5 @@ public class DoubleLink<E> {
         size--;
         }
     }
-
-
-
 
 }
