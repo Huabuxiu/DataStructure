@@ -12,6 +12,24 @@ public class LinkedList<E> {
     private Node head;  //头结点
     private Node tail;  //尾节点
 
+
+    public int getSize() {
+        return size;
+    }
+
+    public Node getHead() {
+        return head;
+    }
+
+    public Node getTail() {
+        return tail;
+    }
+
+    public boolean isEmpty(){
+        return size==0 ? true : false;
+    }
+
+
     public void add(E element){
         //加入节点
         if(head == null){
@@ -94,7 +112,7 @@ public class LinkedList<E> {
 
 
 
-    private class Node{
+    public class Node{
 
         /**
         * @Description: 单链表节点
@@ -113,6 +131,14 @@ public class LinkedList<E> {
         public Node(E elem, Node next) {
             this.elem = elem;
             this.next = next;
+        }
+
+        public E getElem() {
+            return elem;
+        }
+
+        public Node getNext() {
+            return next;
         }
     }
 
