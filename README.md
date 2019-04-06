@@ -8,3 +8,5 @@
 
 ## 树结构
 * [二叉树](https://github.com/Huabuxiu/DataStructure/blob/master/src/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%A0%91/BinaryTree.java)
+* [二叉查找树](https://github.com/Huabuxiu/DataStructure/blob/master/src/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91/BSTree.java)
+* [平衡二叉树AVLTree](https://github.com/Huabuxiu/DataStructure/blob/master/src/%E6%A0%91/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/AVLTree.java)
