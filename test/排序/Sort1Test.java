@@ -13,7 +13,8 @@ public class Sort1Test {
 //        Sort1.selectSort(a,a.length);
 //        Sort1.selectSort(a,a.length);
 
-        QuickSort.quickSort(a,a.length);
+//        QuickSort.quickSort(a,a.length);
+        MergeSort.mergeSort(a,a.length);
         for (int x :
                 a) {
             System.out.print(x+" ");
